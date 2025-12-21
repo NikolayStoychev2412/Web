@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌨️ Background */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f5132 0%, #14532d 50%, #7f1d1d 100%);
+}
+
+/* 🎄 Header */
+.app-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.app-header h1 {
+  color: #b91c1c;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #14532d;
+  font-size: 1.1rem;
+}
+
+/* 🎁 Main Layout */
+.app-main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 3rem auto;
+  padding: 0 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ⬅️ 3 колони */
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* 🎄 Cards */
+.component-card {
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #14532d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.component-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎅 Titles */
+.component-card h2 {
+  color: #b91c1c;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  border-bottom: 2px dashed #14532d;
+  padding-bottom: 0.5rem;
+}
+
+/* 🎁 Text */
+.component-card p {
+  color: #1f2937;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* 🔢 Counter */
+.count-display {
+  font-size: 2.2rem !important;
+  font-weight: bold;
+  color: #14532d;
+  text-align: center;
+  margin: 1.5rem 0 !important;
+}
+
+/* 🎄 Buttons */
+button {
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.4rem;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  transform: scale(1.08);
+}
+
+/* 🎁 Reset */
+.reset-btn {
+  background: linear-gradient(135deg, #14532d, #064e3b);
+}
+
+.reset-btn:hover {
+  background: linear-gradient(135deg, #166534, #065f46);
+}
+
+/* 🎄 Button group */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ✉️ Input */
+input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #14532d;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #b91c1c;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.2);
+}
+
+/* 🎄 Footer */
+.app-footer {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  text-align: center;
+  color: #14532d;
+  font-weight: 500;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-main {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .component-card {
+    padding: 1.5rem;
+  }
+}
